@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.AddTourController"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #f0f4f8;">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Dodaj Novu Turu" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeButton" text="Zatvori"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+            <!-- Vrijeme polaska -->
+            <Label text="Vrijeme Polaska:"/>
+            <HBox spacing="10" alignment="CENTER">
+                <DatePicker fx:id="departureDatePicker" promptText="Datum" />
+                <Spinner fx:id="departureHourSpinner" prefWidth="60" />
+                <Label text=":"/>
+                <Spinner fx:id="departureMinuteSpinner" prefWidth="60" />
+            </HBox>
+
+            <!-- Vrijeme dolaska -->
+            <Label text="Vrijeme Dolaska:"/>
+            <HBox spacing="10" alignment="CENTER">
+                <DatePicker fx:id="arrivalDatePicker" promptText="Datum" />
+                <Spinner fx:id="arrivalHourSpinner" prefWidth="60" />
+                <Label text=":"/>
+                <Spinner fx:id="arrivalMinuteSpinner" prefWidth="60" />
+            </HBox>
+
+            <TextField fx:id="statusField" promptText="Status Ture" />
+            <TextField fx:id="totalPriceField" promptText="Ukupna Cijena" />
+
+            <!-- Vozač -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Vozač:" />
+                <Button fx:id="driverSelectionButton" text="Izaberi Vozača" />
+            </HBox>
+            <Label fx:id="driverInfoLabel" text="Nema vozača izabranog" style="-fx-text-fill: gray;" />
+
+            <Label text="Tura će biti dodeljena od strane vas (Dispečera)." style="-fx-text-fill: #3498db;" />
+
+            <Button fx:id="submitButton" text="Spasi Turu" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+        </VBox>
+    </center>
+</BorderPane>

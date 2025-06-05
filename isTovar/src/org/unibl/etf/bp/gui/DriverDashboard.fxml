@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.DriverDashboardController"
+            prefWidth="800" prefHeight="600">
+
+    <!-- Pozadinska slika -->
+    <center>
+        <StackPane>
+            <!-- Slika u pozadini -->
+            <ImageView fx:id="backgroundImage" fitWidth="800" fitHeight="600" preserveRatio="true" />
+            
+            <Rectangle width="800" height="600" fill="black" opacity="0.1" />
+            
+            <!-- Sadržaj -->
+            <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30;">
+                <Label text="Dobrodošli, Vozaču!"
+                       style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, black, 5, 0.5, 1, 1);" />
+                
+                <VBox spacing="15" alignment="CENTER">
+                    <Button fx:id="viewToursButton" text="Raspored Tura"
+                            style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 180;" />
+                    <Button fx:id="viewTruckButton" text="Moj Kamion"
+                            style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 180;" />
+                    <Button fx:id="viewTrailerButton" text="Moja Prikolica"
+                            style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 180;" />
+                    <Button fx:id="reportIssueButton" text="Prijavi Problem"
+                            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 180;" />
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Gornji meni -->
+    <top>
+        <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Vozačka Kontrolna Tabla"
+                   style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="logoutButton" text="Odjava"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+</BorderPane>

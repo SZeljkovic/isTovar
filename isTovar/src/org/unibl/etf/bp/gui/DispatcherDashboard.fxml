@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.DispatcherDashboardController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f0f4f8;">
+
+    <!-- Glavni sadržaj -->
+    <center>
+        <StackPane>
+            <!-- Slika u pozadini -->
+            <ImageView fx:id="backgroundImage" fitWidth="800" fitHeight="600" preserveRatio="true" />
+            
+            <!-- Gornji meni -->
+            <VBox alignment="CENTER" spacing="25">
+                <Label text="Dobrodošli, Dispečeru!"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, black, 5, 0.5, 1, 1);" />
+
+                <VBox spacing="15" alignment="CENTER">
+                    <Button fx:id="driversButton" text="Vozači"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="trucksButton" text="Kamioni"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="trailersButton" text="Prikolice"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="issuesButton" text="Problemi"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="toursButton" text="Ture"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="addTourButton" text="Dodaj turu"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                    <Button fx:id="addCompanyButton" text="Dodaj firmu"
+                            style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200;" />
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Gornji meni -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10"
+              style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Dispečerska Kontrolna Tabla"
+                   style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="logoutButton" text="Odjava"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+</BorderPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.TrailerInfoController"
+            prefWidth="600" prefHeight="350"
+            style="-fx-background-color: #ecf0f1;">
+
+    <!-- Zaglavlje -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Informacije o Prikolici" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeButton" text="Zatvori"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <!-- Glavni sadržaj -->
+    <center>
+        <VBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 30;">
+            <HBox spacing="20">
+                <Label text="Vrsta:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="typeLabel"/>
+            </HBox>
+            <HBox spacing="20">
+                <Label text="Nosivost:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="capacityLabel"/>
+            </HBox>
+            <HBox spacing="20">
+                <Label text="Godina Proizvodnje:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="yearLabel"/>
+            </HBox>
+            <HBox spacing="20">
+                <Label text="Registarska Oznaka:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="licenseLabel"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

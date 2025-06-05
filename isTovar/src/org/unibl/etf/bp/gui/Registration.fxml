@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.collections.FXCollections?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="400" prefHeight="550" fx:controller="org.unibl.etf.bp.gui.RegistrationController">
+    <children>
+        <VBox alignment="CENTER" spacing="12.0"
+              AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+              style="-fx-background-color: #f0f4f8; -fx-padding: 30;">
+            
+            <Label text="Registracija"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+            <TextField fx:id="imeField" promptText="Ime" style="-fx-pref-width: 200px;" />
+            <TextField fx:id="prezimeField" promptText="Prezime" style="-fx-pref-width: 200px;" />
+            <TextField fx:id="usernameField" promptText="Korisničko ime" style="-fx-pref-width: 200px;" />
+            <PasswordField fx:id="passwordField" promptText="Lozinka" style="-fx-pref-width: 200px;" />
+            <TextField fx:id="emailField" promptText="Email" style="-fx-pref-width: 200px;" />
+            <TextField fx:id="brojTelefonaField" promptText="Broj telefona" style="-fx-pref-width: 200px;" />
+
+            <ChoiceBox fx:id="ulogaChoiceBox" style="-fx-pref-width: 200px;" />
+            
+            <TextField fx:id="brojDozvoleField" promptText="Broj dozvole" style="-fx-pref-width: 200px;" visible="false"/>
+			<TextField fx:id="licencaField" promptText="Licenca" style="-fx-pref-width: 200px;" visible="false"/>
+            
+
+
+            <Button fx:id="registerButton" text="Registruj se"
+                    style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 200px;" />
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: #f0f4f8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.TourController">
+
+    <!-- Top meni -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Lista Tura" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="closeButton" style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Zatvori" />
+        </HBox>
+    </top>
+
+    <!-- Tabela u centru -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <TableView fx:id="toursTable" prefHeight="500" prefWidth="850">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" text="ID Ture" />
+                    <TableColumn fx:id="departureTimeColumn" prefWidth="150" text="Vrijeme Polaska" />
+                    <TableColumn fx:id="arrivalTimeColumn" prefWidth="150" text="Vrijeme Dolaska" />
+                    <TableColumn fx:id="statusColumn" prefWidth="144.80001831054688" text="Status" />
+                    <TableColumn fx:id="driverIdColumn" prefWidth="90.4000244140625" text="Vozač ID" />
+                    <TableColumn fx:id="dispatcherIdColumn" prefWidth="112.800048828125" text="Dispečer ID" />
+                    <TableColumn fx:id="totalPriceColumn" prefWidth="160.800048828125" text="Ukupna Cijena" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

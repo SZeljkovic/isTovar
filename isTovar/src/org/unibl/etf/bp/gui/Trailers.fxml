@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: #f0f4f8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.TrailersController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Lista Prikolica" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="closeButton" style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Zatvori" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <TableView fx:id="trailersTable" prefHeight="500" prefWidth="850">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="113.60000038146973" text="ID" />
+                    <TableColumn fx:id="vrstaColumn" prefWidth="106.4000244140625" text="Vrsta" />
+                    <TableColumn fx:id="nosivostColumn" prefWidth="204.79998779296875" text="Nosivost" />
+                    <TableColumn fx:id="yearColumn" prefWidth="217.60006713867188" text="Godina Proizvodnje" />
+                    <TableColumn fx:id="licensePlateColumn" prefWidth="216.00006103515625" text="Registarska Oznaka" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

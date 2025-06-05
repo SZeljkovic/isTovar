@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: #f0f4f8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.IssueListController">
+
+    <!-- Zaglavlje -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Lista Problema" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="closeButton" style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Zatvori" />
+        </HBox>
+    </top>
+
+    <!-- Tabela i dugme -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <TableView fx:id="issuesTable" prefHeight="500" prefWidth="850">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="80" text="ID" />
+                    <TableColumn fx:id="userIdColumn" prefWidth="100" text="ID Korisnika" />
+                    <TableColumn fx:id="textColumn" prefWidth="356.8000793457031" text="Tekst Problema" />
+                    <TableColumn fx:id="dateColumn" prefWidth="199.199951171875" text="Datum" />
+                    <TableColumn fx:id="statusColumn" prefWidth="123.99993896484375" text="Status" />
+                </columns>
+            </TableView>
+
+            <Button fx:id="resolveButton" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="Riješi Problem" visible="false" />
+        </VBox>
+    </center>
+</BorderPane>

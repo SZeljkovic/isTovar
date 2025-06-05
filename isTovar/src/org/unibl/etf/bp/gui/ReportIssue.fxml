@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.ReportIssueController"
+            prefWidth="500" prefHeight="400"
+            style="-fx-background-color: #f8f9fa;">
+
+    <!-- Gornji dio -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Prijava Problema" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeButton" text="Zatvori"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <!-- Centar -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30;">
+            <Label text="Unesite opis problema:" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TextArea fx:id="problemTextArea" prefWidth="400" prefHeight="200"
+                      wrapText="true" promptText="Npr. Kamion ne pali, gubi snagu..." />
+            <Button fx:id="submitButton" text="Pošalji Prijavu"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </VBox>
+    </center>
+</BorderPane>

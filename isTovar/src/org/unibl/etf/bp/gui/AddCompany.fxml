@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.unibl.etf.bp.gui.AddCompanyController"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #f0f4f8;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Dodaj Firmu" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeButton" text="Zatvori"
+                    style="-fx-background-color: white; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+            <!-- Formular za unos podataka o firmi -->
+            <Label text="Podaci o firmi" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TextField fx:id="nazivField" promptText="Naziv firme" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="emailField" promptText="Email" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="ziroRacunField" promptText="Žiro račun" style="-fx-pref-width: 300;"/>
+
+            <!-- Formular za unos adrese -->
+            <Label text="Podaci o adresi" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TextField fx:id="ulicaField" promptText="Ulica" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="brojField" promptText="Broj" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="gradField" promptText="Grad" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="postanskiBrojField" promptText="Poštanski broj" style="-fx-pref-width: 300;"/>
+            <TextField fx:id="drzavaField" promptText="Država" style="-fx-pref-width: 300;"/>
+
+            <!-- Formular za unos telefona -->
+            <Label text="Podaci o telefonu" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TextField fx:id="brojTelefonaField" promptText="Broj telefona" style="-fx-pref-width: 300;"/>
+            <CheckBox fx:id="faxCheckBox" text="Firma ima fax?" style="-fx-pref-width: 300;"/>
+
+            <!-- Dugmadi za dodavanje -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="addButton" text="Dodaj Firmu" style="-fx-background-color: #2c3e50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button fx:id="clearButton" text="Očisti" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
